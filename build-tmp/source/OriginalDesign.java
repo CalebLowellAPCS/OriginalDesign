@@ -21,7 +21,9 @@ size(1000, 1000);
 public void draw()
 {
 	head();
+	mouth();
   	eyes();
+  	hat();
 }
 
 public void eyes()
@@ -33,12 +35,36 @@ public void eyes()
 	ellipse(460,185,10,15);
 	ellipse(540,185,10,15);
 
+	fill(255,255,255);
+	ellipse(459,183,7,9);
+	ellipse(539,183,7,9);
+
 }
 
 public void head()
 {
 	noFill();
 	ellipse(500,200,200,250);
+}
+
+public void mouth()
+{
+	fill(0,0,0);
+	strokeWeight(5);
+	line(470, 250, 530, 250);
+	strokeWeight(1);
+}
+
+public void hat()
+{
+fill(255, 255, 153);
+noStroke();
+arc(500, 150, 200, 200, PI, TWO_PI);
+
+strokeWeight(50);
+line(300, 350, 700, 350);
+strokeWeight(1);
+stroke(0, 0, 0);
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "OriginalDesign" };
