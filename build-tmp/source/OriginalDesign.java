@@ -16,8 +16,9 @@ public class OriginalDesign extends PApplet {
 
 public void setup()
 {
-size(1000, 1000);
+	size(1000, 1000);
 }
+
 public void draw()
 {
 	background(135, 206,250);
@@ -25,6 +26,7 @@ public void draw()
 	mouth();
   	eyes();
   	hat();
+  	handle();
   	body();
   	sword();
   	noLoop();
@@ -93,18 +95,54 @@ public void body()
 	line(500, 300, 500, 600);
 
 	//Legs
-	line(500, 600, 600, 900);
-	line(500, 600, 400, 900);
+	int leglength = 900;
+
+	line(500, 600, 600, leglength);
+	line(500, 600, 400, leglength);
 
 	//Arms
-	line(500, 300, 600, 600);
-	line(500, 300, 400, 600);
+	int armlength = 600;
+
+	line(500, 300, 600, armlength);
+	line(500, 300, 400, armlength);
 
 }
 
 public void sword()
 {
+	noStroke();
 
+	//Blade
+	fill(205, 255, 255);
+
+	beginShape();
+	vertex(75, 40);
+	vertex(85, 100);
+	vertex(600, 600);
+	vertex(600, 590);
+	endShape(CLOSE);
+
+	//Handle 1
+	fill(184,134,11);
+
+	beginShape();
+	vertex(500, 485);
+	vertex(500, 503);
+	vertex(600, 600);
+	vertex(600, 590);
+	endShape(CLOSE);
+}
+
+public void handle()
+{
+	fill(184,134,11);
+
+	beginShape();
+	vertex(600, 600);
+	vertex(600, 590);
+	vertex(700, 685);
+	vertex(700, 700);
+	endShape(CLOSE);
 }
 
 public void mousePressed()
