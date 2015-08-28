@@ -1,3 +1,6 @@
+int wepx1 = 450;
+int wepy1 = 600;
+
 void setup()
 {
 	size(1000, 1000);
@@ -100,21 +103,47 @@ void sword()
 	fill(205, 255, 255);
 
 	beginShape();
-	vertex(75, 40);
-	vertex(85, 100);
-	vertex(600, 600);
-	vertex(600, 590);
+	vertex(wepx1 - 375, wepy1 - 560);
+	vertex(wepx1 - 365, wepy1 - 500);
+	vertex(wepx1 + 150, wepy1);
+	vertex(wepx1 + 150, wepy1 - 10);
 	endShape(CLOSE);
 
 	//Handle 1
 	fill(184,134,11);
 
 	beginShape();
-	vertex(500, 485);
-	vertex(500, 503);
-	vertex(600, 600);
-	vertex(600, 590);
+	vertex(wepx1, wepy1 - 167);
+	vertex(wepx1, wepy1 - 145);
+	vertex(wepx1 + 150, wepy1);
+	vertex(wepx1 + 150, wepy1 - 10);
 	endShape(CLOSE);
+
+	wepy1 = wepy1 - 3;
+	wepx1 = wepx1 - 3;
+
+	/*
+
+	if (wepx1 < 200) {
+
+	wepx1 = wepx1 + 3;
+
+	}
+	if (wepy1 < 400) {
+
+	wepy1 = wepy1 + 3;
+
+	}
+	if (wepx1 > 500) {
+	
+	wepx1 = wepx1 - 3;
+	}
+	if (wepy1 > 700) {
+
+	wepy1 = wepy1 - 3;
+	
+	}
+	*/
 }
 
 void handle()
@@ -122,12 +151,40 @@ void handle()
 	fill(184,134,11);
 
 	beginShape();
-	vertex(600, 600);
-	vertex(600, 590);
-	vertex(700, 685);
-	vertex(700, 700);
+	vertex(wepx1 + 149, wepy1 - 1);
+	vertex(wepx1 + 149, wepy1 - 11);
+	vertex(wepx1 + 250, wepy1 + 85);
+	vertex(wepx1 + 250, wepy1 + 100);
 	endShape(CLOSE);
+
+	wepy1 = wepy1 - 3;
+	wepx1 = wepx1 - 3;
+
+	
+	/*
+	if (wepx1 < 200) {
+
+	wepx1 = wepx1 + 3;
+
+	}
+	if (wepy1 < 400) {
+
+	wepy1 = wepy1 + 3;
+
+	}
+	if (wepx1 > 500) {
+	
+	wepx1 = wepx1 - 3;
+	}
+	if (wepy1 > 700) {
+
+	wepy1 = wepy1 - 3;
+	
+	}
+	*/
+
 }
+
 
 void mousePressed()
 {
